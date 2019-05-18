@@ -63,7 +63,7 @@ submitButton.addEventListener('click', function (e) {
 	// Showing Message Success
 	setTimeout(function() {
 		anime.remove('svg.flying-envelope')
-
+		
 		// Change message status
 		const stateInfo = document.querySelector('.state__info.loading-state__info--loading');
 		stateInfo.classList.add('loading-state__info--success');
@@ -71,5 +71,6 @@ submitButton.addEventListener('click', function (e) {
 		//show success illustration
 		const successIllustration = document.querySelector('.success-illustration');
 		successIllustration.classList.add('success-illustration--show');
+
 	},5800)
 })
