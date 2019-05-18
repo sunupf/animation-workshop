@@ -1,0 +1,526 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+
+@font-face {
+  font-family: Metropolis;
+  src: url(/public-assets/fonts/metropolis/metropolis-bold-webfont.woff2)
+      format("woff2"),
+    url(/public-assets/fonts/metropolis/metropolis-bold-webfont.woff)
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/public-assets/fonts/metropolis/metropolis-semibold-webfont.woff2)
+      format("woff2"),
+    url(/public-assets/fonts/metropolis/metropolis-semibold-webfont.woff)
+      format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+/* General Styling Section*/
+body,
+html {
+  background-color: #fff;
+  color: #1e252c;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Metropolis, sans-serif;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.825em;
+}
+/* End of General Styling Section*/
+
+/* Landing Page Section */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.info {
+  padding: 0 2em;
+}
+.info h1 {
+  overflow: hidden;
+  height: 40px;
+  margin-top: 0;
+}
+.info h1 img {
+  display: block;
+  height: 40px;
+}
+.info h1,
+.info h2 {
+  margin-bottom: 2.25rem;
+}
+.night-illustration {
+  display: none;
+}
+.highlight {
+  color: #FF7F2A;
+  font-weight: 700;
+}
+.contact-intro {
+  margin-top: 1.5em;
+}
+.button {
+	cursor: pointer;
+	justify-content: center;
+	transition: background-color 0.32s ease-in;
+  align-items: center;
+  background-color: #FF7F2A;
+  border-radius: 2px;
+  color: #fff;;
+  display: flex;
+  height: 2rem;
+  text-decoration: none;
+	width: 128px;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	line-height: 2;
+	font-family: "Metropolis", sans-serif;
+}
+
+.button:hover {
+  background-color: #FF4F14;
+}
+/* End of Landing Page Section */
+
+/* Modal Section */
+.modal-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(28,25,24,0.75);
+	overflow-y: scroll;
+}
+
+.modal-container--open {
+	display: flex;
+}
+
+.modal {
+	width: 280px;
+  background-color: #fff;
+  padding : 2.5rem;
+  box-shadow: 0px 0px 32px rgba(124, 124, 124, 0.25);
+  border-radius: 2px;
+	position: relative;
+	animation-name: zoomIn;
+  animation-fill-mode: both;
+	animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;	
+}
+
+.modal__close-button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+.modal__close-button:hover svg .icon-close {
+	stroke: #FF4F14;
+}
+
+.modal__header {
+  font-size: 1.5rem;
+  font-weight:700;
+	font-family: 'Metropolis', serif;
+	margin-bottom: 2.5rem;
+}
+/* End of Modal Section */
+
+/* Form Section */
+.form__group {
+  margin-bottom : 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form__group label {
+	line-height: 2;
+  font-size: 0.75rem;
+  font-weight:600;
+	font-family: 'Open Sans', serif;
+	color: #495057;
+}
+
+.form__group input,
+.form__group textarea{
+  font-size: 0.825rem;
+	font-family: 'Open Sans', serif;
+	border: 0;
+	border-bottom: 1px solid #6D757E;
+}
+
+.form__group input {
+	height: 2rem;
+}
+
+.form__group textarea{
+	height: 4.875rem;
+}
+
+.form__group textarea.form__textarea--unreziable {
+	resize: none;
+}
+
+.form__group input::placeholder, .form__group input::-ms-placeholder {
+	color: #6D757E;
+}
+
+.form__group input:focus,
+.form__group textarea:focus{
+	outline:none;
+  border-bottom: 1px solid #27AE60;
+}
+
+form .button {
+	border: 0;
+	width: 100%;
+}
+/* End of Form Section */
+
+/* Illustration Section */
+.loading-state {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	border-radius: 2px;
+	overflow: hidden;
+	font-family: 'Metropolis', sans-serif;
+	display: none;
+}
+
+.loading-state__show {
+	display: flex;
+}
+
+.loading-state__illustration {
+	height: 362px;
+	width : 100%;
+	background-color: #FFEADC;
+	background-image: url("/public-assets/illustrations/hill.svg");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	z-index: 1;
+	animation-name: flyInStateIllustration;
+  animation-fill-mode: both;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in-out;	
+	border-radius: 999px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.envelope {
+	animation-name: zoomIn;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18);
+}
+
+.envelope--fly {
+	animation-name: flyOutUp;
+  animation-fill-mode: both;
+  animation-duration: 0.6s;
+  animation-delay: 1.2s;
+  animation-timing-function: linear;
+}
+
+.envelope .envelope__letter {
+	animation-name: insertLetter;
+  animation-fill-mode: both;
+  animation-duration: 0.6s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-in-out;
+}
+
+.envelope .envelope__part {
+	animation-name: envelopeBounce;
+  animation-fill-mode: both;
+  animation-duration: 0.42s;
+  animation-delay: 0.93s;
+  animation-timing-function: ease-in-out;
+}
+
+.envelope .envelope__lips {
+	transform-origin: 50% 88.5px; 
+}
+
+.envelope .envelope__lips--open {
+	animation-name: closeEnvelopeLips;
+  animation-fill-mode: both;
+  animation-duration: 0.15s;
+  animation-delay: 1.35s;
+  animation-timing-function: linear;
+}
+
+.envelope .envelope__lips--close {
+	transform: rotateX(90deg);
+	animation-name: closeEnvelopeLips2;
+  animation-fill-mode: both;
+  animation-duration: 0.15s;
+  animation-delay: 1.5s;
+  animation-timing-function: linear;
+}
+
+svg.loading-state__loading-path {
+	opacity: 0;
+	position: absolute;
+	top: 20%;
+	left: -70px;
+}
+
+svg.flying-envelope {
+	position: absolute;
+	top: 18%;
+	left: -85px;
+}
+
+svg.success-illustration {
+	position: absolute;
+	left: -11px;
+	bottom: -61px;
+	display: none;
+}
+
+svg.success-illustration--show {
+	display: block;
+	opacity: 0;
+	animation-name: flyInStateIllustration;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18);
+}
+
+svg.success-illustration .delivered-envelope {
+	display: none;
+}
+
+svg.success-illustration--show .delivered-envelope{
+	display: block;
+	animation-name: flyLeft;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+svg.success-illustration .pop-line {
+	opacity: 0;
+}
+
+svg.success-illustration--show .pop-line{
+	animation-name: zoomIn;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-delay: 1s;
+	animation-timing-function: ease-in;
+	transform-origin: 115px 273px;
+}
+
+svg.success-illustration--show .mailbox-sign .mailbox-sign__mark{
+	animation-name: rotateMailboxSign;
+  animation-fill-mode: both;
+  animation-duration: 0.2s;
+  animation-delay: 1.1s;
+	animation-timing-function: ease-in;
+	transform-origin: 209px 301px;
+}
+
+.state__info {
+	height: 208px;
+	width : 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	position: relative;
+}
+
+.state__info .state__info__background {
+	height: 150%;
+	width : 150%;
+	background-color: #FF7F2A;
+	position: absolute;
+	border-radius: 999px;
+	opacity: 0;
+}
+
+.loading-state__info--loading .state__info__background {
+	background-color: #FF7F2A;
+}
+
+.loading-state__info--success .state__info__background {
+	background-color: #27AE60;
+}
+
+.loading-state__show .loading-state__info--loading .state__info__background{
+	animation-name: zoomInStateInfo;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+	animation-delay: 0.1s;
+  animation-timing-function: ease-in-out;
+}
+
+.loading-state__show .state__info p.state__info--success{
+	display: none;
+}
+
+.loading-state__show .loading-state__info--loading p.state__info--loading,
+.loading-state__show .loading-state__info--success p.state__info--success{
+	z-index: 1;
+	display: block;
+	animation-name: zoomIn;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18);
+}
+
+.loading-state__show .loading-state__info--success p.state__info--loading{
+	display: none;
+}
+
+/* End of Illustration Section */
+
+
+/* Animation Section */
+/* End of Animation Section */
+
+/* Keyframe Section */
+
+@keyframes flyInStateIllustration {
+	0% {
+		opacity:0;
+		transform: scale3d(0.5,0.5,0.5) translateY(500px);
+	}
+  100% {
+		transform: translateY(0);		
+		opacity: 1;
+		border-radius:0;
+  }
+}
+
+@keyframes zoomIn {
+	0% {
+		opacity:0;
+		transform: scale3d(0,0,0);
+	}
+  100% {
+		transform: scale3d(1,1,1);		
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutUp {
+	0% {
+		transform: scale3d(1,1,1);
+	}
+	40% {
+		transform: scale3d(1.1,1.1,1.1);
+	}
+	70% {
+		transform: scale3d(0.3,0.3,0.3);
+	}
+  100% {
+		transform: scale3d(0.3,0.3,0.3) translateY(-750px);
+  }
+}
+
+@keyframes insertLetter {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(70px);
+	}
+  100% {
+		transform: translateY(50px);
+  }
+}
+
+@keyframes envelopeBounce {
+	0% {
+		transform: translateY(0px);
+	}
+	20% {
+		transform: translateY(20px);
+	}
+  100% {
+		transform: translateY(0px);
+  }
+}
+
+@keyframes closeEnvelopeLips {
+	0% {
+	}
+  100% {
+		transform: rotateX(90deg);
+  }
+}
+
+@keyframes closeEnvelopeLips2 {
+	0% {
+	}
+  100% {
+		transform: rotateX(180deg);
+  }
+}
+
+@keyframes flyLeft {
+	0% {
+		transform: translateX(-50%);
+	}
+  100% {
+		transform: translateX(0);
+  }
+}
+
+@keyframes rotateMailboxSign {
+	0% {
+	}
+  100% {
+		transform: rotate(-90deg);
+  }
+}
+
+@keyframes zoomInStateInfo {
+	0% {
+		opacity:0;
+		transform: scale3d(0.3,0.3,0.3) translateY(100px);
+	}
+	100% {
+		transform: scale3d(1,1,1) translateY(0);		
+		opacity: 1;
+	}
+}
+
+/* End of Keyframe Section */
