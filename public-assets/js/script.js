@@ -43,26 +43,11 @@ submitButton.addEventListener('click', function (e) {
 		const envelope = document.querySelector('#contact-us-modal .loading-state svg.envelope');
 		envelope.classList.add('envelope--fly')
 	},500)
-
-
-	// start loading loop
-	setTimeout(function() {
-		const path = anime.path('svg.loading-state__loading-path path');
-		
-		anime({
-			targets: 'svg.flying-envelope',
-			translateX: path('x'),
-			translateY: path('y'),
-			rotate: path('angle'),
-			easing: 'cubicBezier(.2,.61,.77,.32)',
-			duration: 3000,
-			loop: true
-		});
-	},2800)
 	
 	// Showing Message Success
 	setTimeout(function() {
-		anime.remove('svg.flying-envelope')
+		const envelope = document.querySelector('#contact-us-modal .loading-state svg.envelope');
+		envelope.style.display= "none";
 
 		// Change message status
 		const stateInfo = document.querySelector('.state__info.loading-state__info--loading');
