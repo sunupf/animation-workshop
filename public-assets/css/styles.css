@@ -124,10 +124,10 @@ h2 {
   box-shadow: 0px 0px 32px rgba(124, 124, 124, 0.25);
   border-radius: 2px;
 	position: relative;
-	animation-name: zoomIn;
-  animation-fill-mode: both;
-	animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;	
+	/* animation-name: zoomIn; */
+  /* animation-fill-mode: both; */
+	/* animation-duration: 0.2s; */
+  /* animation-timing-function: ease-in-out;	 */
 }
 
 .modal__close-button {
@@ -226,10 +226,10 @@ form .button {
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	z-index: 1;
-	animation-name: flyInStateIllustration;
-  animation-fill-mode: both;
-	animation-duration: 0.3s;
-	animation-timing-function: ease-in-out;	
+	/* animation-name: flyInStateIllustration; */
+  /* animation-fill-mode: both; */
+	/* animation-duration: 0.3s; */
+	/* animation-timing-function: ease-in-out;	 */
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -238,35 +238,35 @@ form .button {
 }
 
 .envelope {
-	animation-name: zoomIn;
-  animation-fill-mode: both;
-  animation-duration: 0.3s;
-  animation-delay: 0.2s;
-  animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18);
+	/* animation-name: zoomIn; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.3s; */
+  /* animation-delay: 0.2s; */
+  /* animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18); */
 }
 
 .envelope--fly {
-	animation-name: flyOutUp;
-  animation-fill-mode: both;
-  animation-duration: 0.6s;
-  animation-delay: 1.2s;
-  animation-timing-function: linear;
+	/* animation-name: flyOutUp; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.6s; */
+  /* animation-delay: 1.2s; */
+  /* animation-timing-function: linear; */
 }
 
 .envelope .envelope__letter {
-	animation-name: insertLetter;
-  animation-fill-mode: both;
-  animation-duration: 0.6s;
-  animation-delay: 0.75s;
-  animation-timing-function: ease-in-out;
+	/* animation-name: insertLetter; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.6s; */
+  /* animation-delay: 0.75s; */
+  /* animation-timing-function: ease-in-out; */
 }
 
 .envelope .envelope__part {
-	animation-name: envelopeBounce;
-  animation-fill-mode: both;
-  animation-duration: 0.42s;
-  animation-delay: 0.93s;
-  animation-timing-function: ease-in-out;
+	/* animation-name: envelopeBounce; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.42s; */
+  /* animation-delay: 0.93s; */
+  /* animation-timing-function: ease-in-out; */
 }
 
 .envelope .envelope__lips {
@@ -274,20 +274,20 @@ form .button {
 }
 
 .envelope .envelope__lips--open {
-	animation-name: closeEnvelopeLips;
-  animation-fill-mode: both;
-  animation-duration: 0.15s;
-  animation-delay: 1.35s;
-  animation-timing-function: linear;
+	/* animation-name: closeEnvelopeLips; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.15s; */
+  /* animation-delay: 1.35s; */
+  /* animation-timing-function: linear; */
 }
 
 .envelope .envelope__lips--close {
 	transform: rotateX(90deg);
-	animation-name: closeEnvelopeLips2;
-  animation-fill-mode: both;
-  animation-duration: 0.15s;
-  animation-delay: 1.5s;
-  animation-timing-function: linear;
+	/* animation-name: closeEnvelopeLips2; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.15s; */
+  /* animation-delay: 1.5s; */
+  /* animation-timing-function: linear; */
 }
 
 svg.loading-state__loading-path {
@@ -311,19 +311,19 @@ svg.success-illustration {
 
 svg.success-illustration--show {
 	display: block;
-	animation-name: flyInStateIllustration;
-  animation-fill-mode: both;
-  animation-duration: 0.3s;
-  animation-delay: 0.2s;
-  animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18);
+	/* animation-name: flyInStateIllustration; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.3s; */
+  /* animation-delay: 0.2s; */
+  /* animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18); */
 }
 
 svg.success-illustration--show .delivered-envelope{
-	animation-name: flyLeft;
-  animation-fill-mode: both;
-  animation-duration: 0.3s;
-  animation-delay: 1s;
-  animation-timing-function: ease-in-out;
+	/* animation-name: flyLeft; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.3s; */
+  /* animation-delay: 1s; */
+  /* animation-timing-function: ease-in-out; */
 }
 
 svg.success-illustration .pop-line {
@@ -331,20 +331,20 @@ svg.success-illustration .pop-line {
 }
 
 svg.success-illustration--show .pop-line{
-	animation-name: zoomIn;
-  animation-fill-mode: both;
-  animation-duration: 0.3s;
-  animation-delay: 1s;
-	animation-timing-function: ease-in;
+	/* animation-name: zoomIn; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.3s; */
+  /* animation-delay: 1s; */
+	/* animation-timing-function: ease-in; */
 	transform-origin: 115px 273px;
 }
 
 svg.success-illustration--show .mailbox-sign .mailbox-sign__mark{
-	animation-name: rotateMailboxSign;
-  animation-fill-mode: both;
-  animation-duration: 0.2s;
-  animation-delay: 1.1s;
-	animation-timing-function: ease-in;
+	/* animation-name: rotateMailboxSign; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.2s; */
+  /* animation-delay: 1.1s; */
+	/* animation-timing-function: ease-in; */
 	transform-origin: 209px 301px;
 }
 
@@ -375,11 +375,11 @@ svg.success-illustration--show .mailbox-sign .mailbox-sign__mark{
 }
 
 .loading-state__show .loading-state__info--loading .state__info__background{
-	animation-name: zoomInStateInfo;
-  animation-fill-mode: both;
-  animation-duration: 0.3s;
-	animation-delay: 0.1s;
-  animation-timing-function: ease-in-out;
+	/* animation-name: zoomInStateInfo; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.3s; */
+	/* animation-delay: 0.1s; */
+  /* animation-timing-function: ease-in-out; */
 }
 
 .loading-state__show .state__info p.state__info--success{
@@ -390,11 +390,11 @@ svg.success-illustration--show .mailbox-sign .mailbox-sign__mark{
 .loading-state__show .loading-state__info--success p.state__info--success{
 	z-index: 1;
 	display: block;
-	animation-name: zoomIn;
-  animation-fill-mode: both;
-  animation-duration: 0.3s;
-  animation-delay: 0.2s;
-  animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18);
+	/* animation-name: zoomIn; */
+  /* animation-fill-mode: both; */
+  /* animation-duration: 0.3s; */
+  /* animation-delay: 0.2s; */
+  /* animation-timing-function: cubic-bezier(0.23, 1.25, 0.48, 1.18); */
 }
 
 .loading-state__show .loading-state__info--success p.state__info--loading{
